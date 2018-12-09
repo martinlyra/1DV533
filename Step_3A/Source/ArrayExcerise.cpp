@@ -22,18 +22,19 @@ int main()
 		// ----- Start of task-related code -----
 		// Prepare variables
 		int count;
-		vector<int> integers = { };
+		int* integers;
 
 		// Get number for how many N to get
 		cout << "Enter how many N to input: ";
 		cin >> count;
+		integers = new int[count];
 
 		// Get N until count has been reached
 		for (int i = 0; i < count; i++) {
 			int in;
 			cout << "Number " << i + 1 << ": ";
 			cin >> in;
-			integers.push_back(in);
+			integers[i] = in;
 		}
 
 		// Get number M
@@ -43,16 +44,18 @@ int main()
 
 		// Count how many N lower than M
 		int c = 0;
-		for (int n : integers) {
-			if (n < m)
+		for (int i = 0; i < count; i++) {
+			if (integers[i] < m)
 				c++;
 		}
 
 		cout << c << " numbers lower than M." << "\n\n";
 
 		// Print the integers in reverse order
-		for (int i = integers.size() - 1; i >= 0; i--)
+		for (int i = count - 1; i >= 0; i--)
 			cout << integers[i] << endl;
+
+		delete[] integers;
 
 		// ----- End of task-related code -----
 		// End of program
