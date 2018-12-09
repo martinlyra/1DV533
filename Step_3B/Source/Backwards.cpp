@@ -12,6 +12,7 @@
 #include <string>
 using namespace std;
 
+// Assignment-common code
 #include "Common.h"
 
 // Prototypes
@@ -20,11 +21,11 @@ const char* reverseString(const char* string);
 // Entry point
 int main()
 {
-	cout << "Reverse a string!";
-
 	char answer;
 
+	cout << "Reverse a string!";
 	do {
+		// ----- Start of task-related code -----
 		cout << "\n=====================================\n";
 		cout << "Please enter a text: ";
 		const char* input = readLine();
@@ -33,6 +34,7 @@ int main()
 
 		cout << "The text backwards: " << reversed << endl;
 
+		// ----- End of task-related code -----
 		// End of program
 		cout << "\nDo you want to repeat again? (y/n)";
 		answer = readLine()[0];
@@ -41,6 +43,9 @@ int main()
 	return 0;
 }
 
+// const char* reverseString(const char*)
+//
+// Returns the input string as a backward copy
 const char* reverseString(const char* string)
 {
 	// Create a buffer copy of same size

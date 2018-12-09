@@ -8,13 +8,18 @@
 // Log:			2018-12-06	Created
 //-----------------------------------------------------------------------
 #include <iostream>
+#include <string>
 using namespace std;
 
 #include "Common.h"
 
+// Constants
 const int BUFFER_SIZE = 256;
 
-char* readLine()
+// const char* readLine()
+//
+// Helper function for reading whole input lines from user
+const char* readLine()
 {
 	char input[BUFFER_SIZE];
 

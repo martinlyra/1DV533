@@ -38,6 +38,9 @@ int main()
 	return 0;
 }
 
+// const char* readLine()
+//
+// Helper function for reading whole input lines from user
 const char* readLine()
 {
 	char input[BUFFER_SIZE];
@@ -53,9 +56,13 @@ const char* readLine()
 	return out;
 }
 
+// void CheckPalindrome()
+//
+// Code for task 5 in part A of Step 3
 void checkPalindrome()
 {
 	cout << "\n=====================================\n";
+	cout << "Please enter a text: ";
 
 	if (isAPalindrome(readLine())) {
 		cout << "It is a palindrom.";
@@ -65,6 +72,10 @@ void checkPalindrome()
 	}
 }
 
+// bool isAPalindrome(const char*)
+//
+// Checks whether the line is a palindrome or not, characters
+// has to be in the same order and composition for both directions.
 bool isAPalindrome(const char* line)
 {
 	int length = strlen(line);

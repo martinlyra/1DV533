@@ -8,4 +8,7 @@
 // Log:			2018-12-06	Created
 //-----------------------------------------------------------------------
 
-char* readLine();
+// See Common.cpp for comments for every each of the functions/classes
+// listed here
+
+const char* readLine();

@@ -13,19 +13,20 @@
 #include <string>
 using namespace std;
 
+// Assignment-common code
 #include "Common.h"
 
 // Prototypes
-char* trimString(const char* string);
+const char* trimString(const char* string);
 
 // Entry point
 int main()
 {
-	cout << "Abbreviate a name!";
-
 	char answer;
 
+	cout << "Trim a string!";
 	do {
+		// ----- Start of task-related code -----
 		cout << "\n=====================================\n";
 		cout << "Please enter a text: ";
 		const char* input = readLine();
@@ -34,6 +35,7 @@ int main()
 
 		cout << "Trimmed text: " << treated << endl;
 
+		// ----- End of task-related code -----
 		// End of program
 		cout << "\nDo you want to repeat again? (y/n)";
 		answer = readLine()[0];
@@ -42,7 +44,10 @@ int main()
 	return 0;
 }
 
-char * trimString(const char * string)
+// const char* trimString (const char*)
+//
+// Trims input string of leading and trailing spaces, returns as a new copy
+const char * trimString(const char * string)
 {
 	// Calculate size for the buffer and indices for the copy
 	size_t size = strlen(string);
@@ -55,7 +60,7 @@ char * trimString(const char * string)
 
 	// Create a buffer with appropriate size
 	ptrdiff_t difference = trailPointer - leadPointer;
-	size_t bufferSize = size - difference;
+	size_t bufferSize = difference + 1;
 	char* out = new char[bufferSize + 1];
 
 	// Perform copy

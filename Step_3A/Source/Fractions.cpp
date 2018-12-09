@@ -18,11 +18,15 @@ using namespace std;
 int gcd(int a, int b);
 template<typename ... Args> string stringFormat(const char* format, Args ... args);
 
+// struct Fraction
+// A data structure for storing and easily processing fractions
+//
 struct Fraction
 {
 	int numerator;
 	int denominator;
 
+	// Constructor
 	Fraction(int numerator, int denominator)
 		: numerator(numerator), denominator(denominator)
 	{
@@ -32,17 +36,25 @@ struct Fraction
 		}
 	}
 
+	// Fraction abbreviate()
+	// Return a Fraction with the smallest equivalent of the same fraction
 	Fraction abbreviate()
 	{
 		int factor = gcd(numerator, denominator);
 		return Fraction(numerator / factor, denominator / factor);
 	}
 
+	// string toStringFull()
+	// Returns a string of the two terms in a divison
 	string toStringFull() 
 	{
 		return stringFormat("%i/%i", numerator, denominator);
 	}
 
+	// string toStringFull()
+	// Returns a string of the fraction expressed as an integer followed by an fraction representing the decimals
+	// If n % d = 0, no decimal fraction will be displayed
+	// If n / d < 1, no integer quota will be displayed
 	string toStringMixed()
 	{
 		int remainder = numerator % denominator;
@@ -62,9 +74,10 @@ int main()
 {
 	char answer;
 
+	cout << "FRACTION CALCULATOR";
 	do {
-		cout << "FRACTION CALCULATOR"
-			<< "\n===================================\n";
+		// ----- Start of task-related code -----
+		cout << "\n===================================\n";
 
 		// Variables
 		int n, d;
@@ -85,6 +98,7 @@ int main()
 			<< abbreviated.toStringFull() << " == "
 			<< abbreviated.toStringMixed() << "\n";
 
+		// ----- End of task-related code -----
 		// End of program
 		cout << "\nDo you want to repeat again? (y/n)";
 		cin >> answer;
@@ -93,6 +107,9 @@ int main()
 	return 0;
 }
 
+// int gcd(int, int)
+//
+// Greatest Common Divisor as a recursive function
 int gcd(int a, int b) 
 {
 	if (b == 0)
@@ -100,6 +117,10 @@ int gcd(int a, int b)
 	return gcd(b, a % b);
 }
 
+// string stringFormat(const char*, ...)
+//
+// A novel function for C-like formatting of strings in a secure, memory-efficient, and hassle-free way.
+// Returns the result as a std::string
 template<typename ... Args>
 string stringFormat(const char* format, Args ... args) 
 {

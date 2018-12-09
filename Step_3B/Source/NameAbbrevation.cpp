@@ -13,6 +13,7 @@
 #include <string>
 using namespace std;
 
+// Assignment-common code
 #include "Common.h"
 
 // Prototypes
@@ -21,11 +22,11 @@ const char* treatName(const char* string);
 // Entry point
 int main()
 {
-	cout << "Abbreviate a name!";
-
 	char answer;
 
+	cout << "Abbreviate a name!";
 	do {
+		// ----- Start of task-related code -----
 		cout << "\n=====================================\n";
 		cout << "Please enter a name: ";
 		const char* input = readLine();
@@ -34,6 +35,7 @@ int main()
 
 		cout << "Treated name: " << treated << endl;
 
+		// ----- End of task-related code -----
 		// End of program
 		cout << "\nDo you want to repeat again? (y/n)";
 		answer = readLine()[0];
@@ -42,6 +44,10 @@ int main()
 	return 0;
 }
 
+// const char* treatName(const char* string)
+//
+// Treats input name with abbrevation for use in database, abbrevation
+// performed by removing the first name, but keeping only the first letter
 const char* treatName(const char* string)
 {
 	// Calculate the required size for output string;

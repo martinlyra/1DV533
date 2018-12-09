@@ -38,6 +38,10 @@ int main()
 	return 0;
 }
 
+// void checkPersonalNumber()
+//
+// Code for Task 4 in part A of Step 3; Takes an input string and checks 
+// whether it belongs to a man or woman
 void checkPersonalNumber()
 {
 	cout << "\n=====================================\n";
@@ -63,6 +67,10 @@ void checkPersonalNumber()
 		cout << "woman\n";
 }
 
+// string getPersonalNumber()
+//
+// Asks the user to submit a Swedish Personal Number until it is valid, returns
+// the string as santizied and short as possible.
 string getPersonalNumber() 
 {
 	string out;

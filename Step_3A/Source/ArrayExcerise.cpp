@@ -2,7 +2,8 @@
 // Object: Task 02: Take N numbers, then find numbers lower than M
 //-----------------------------------------------------------------------
 // File: ArrayExercise.cpp
-// Summary: This program finds primes in a specified (constant) range
+// Summary: This program takes input N numbers then compares them to
+// input integer M, whichever are lower than N
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
@@ -18,6 +19,7 @@ int main()
 	char answer;
 
 	do {
+		// ----- Start of task-related code -----
 		// Prepare variables
 		int count;
 		vector<int> integers = { };
@@ -52,6 +54,7 @@ int main()
 		for (int i = integers.size() - 1; i >= 0; i--)
 			cout << integers[i] << endl;
 
+		// ----- End of task-related code -----
 		// End of program
 		cout << "\nDo you want to repeat again? (y/n)";
 		cin >> answer;
@@ -59,3 +62,4 @@ int main()
 
 	return 0;
 }
+
