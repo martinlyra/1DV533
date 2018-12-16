@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Source\TemperatureConverter.cpp">
+    <ClCompile Include="..\..\Source\TemperatureConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
