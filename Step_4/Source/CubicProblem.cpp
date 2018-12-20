@@ -15,7 +15,7 @@
 using namespace std;
 
 // Prototypes
-void getSide(double* side);
+void getSide(double& side);
 double cubeVolume(double side);
 void printVolume(double side);
 
@@ -28,7 +28,7 @@ int main()
 	{
 		double side;
 
-		getSide(&side);
+		getSide(side);
 		printVolume(side);
 		
 		cout << endl << "One more time (Y/N)? ";
@@ -37,10 +37,10 @@ int main()
 	return 0;
 }
 
-void getSide(double * side)
+void getSide(double& side)
 {
 	cout << "Enter the side length of the cube to be computed: ";
-	cin >> *side;
+	cin >> side;
 }
 
 double cubeVolume(double side)

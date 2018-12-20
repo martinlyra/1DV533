@@ -18,7 +18,7 @@ const char* ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 int BUFFER_SIZE = 255;
 
 // Prototypes
-char* encrypt(char* encryptedText, const char* plaintext);
+char* encrypt(char*& encryptedText, const char* plaintext);
 
 int main()
 {
@@ -48,7 +48,7 @@ int main()
 	return 0;
 }
 
-char * encrypt(char * encryptedText, const char * plaintext)
+char * encrypt(char *& encryptedText, const char * plaintext)
 {
 	size_t length = strlen(plaintext);
 	char* buffer = new char[length + 1];

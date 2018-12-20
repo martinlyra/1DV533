@@ -18,7 +18,7 @@ using namespace std;
 // Prototypes
 const double FAHRENHEIT_TO_CELSIUS = (212 - 32) / 100.0f;
 
-bool convertTemperature(double fahrenheit, double* celcius);
+bool convertTemperature(double fahrenheit, double& celcius);
 
 int main()
 {
@@ -45,9 +45,9 @@ int main()
 	return 0;
 }
 
-bool convertTemperature(double fahrenheit, double* celcius) 
+bool convertTemperature(double fahrenheit, double& celcius) 
 {
-	*celcius = (fahrenheit - 32) / FAHRENHEIT_TO_CELSIUS;
+	celcius = (fahrenheit - 32) / FAHRENHEIT_TO_CELSIUS;
 
-	return *celcius >= 0;
+	return celcius >= 0;
 }
