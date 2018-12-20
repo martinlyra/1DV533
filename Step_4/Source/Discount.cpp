@@ -1,8 +1,8 @@
 //-----------------------------------------------------------------------
-// Object: Task 06: Take a fraction then shorten it, if possible
+// Object: Task 06: 
 //-----------------------------------------------------------------------
 // File: Discount.cpp
-// Summary: This programs calculates different ways to display fractions.
+// Summary: 
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
