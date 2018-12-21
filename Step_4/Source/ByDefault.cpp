@@ -1,9 +1,8 @@
 //-----------------------------------------------------------------------
-// Object: Task 01: Abbreviate a name by trimming the first name
+// Object: Task 03: Default parameter in a power function
 //-----------------------------------------------------------------------
-// File: CubicProblem.cpp
-// Summary: This program takes an input name and abbreviates it by
-// trimming the character after the first letter of the first name.
+// File: ByDefault.cpp
+// Summary: This program calculates 2^n for n in N
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
@@ -16,8 +15,10 @@ using namespace std;
 // Prototypes
 double power(double base, double exponent = 2);
 
+// Entry point
 int main()
 {
+	// Shameless copy paste from PM
 	for (int i = 0; i < 10; i++)
 		cout << power(2, i) << " "; // prints 2 raised to the power of i
 	cout << endl;
@@ -30,9 +31,15 @@ int main()
 	return 0;
 }
 
+// double power(double, double)
+//
+// Recursive function for calculating the product of the potent of given base and exponent
 double power(double base, double exponent)
 {
-	if (!exponent)
+	if (exponent > 0)
+		return base * power(base, exponent - 1);
+	else if (exponent < 0)
+		return power(base, exponent + 1) / base;
+	else
 		return 1;
-	return base * power(base, exponent - 1);
 }

@@ -1,8 +1,9 @@
 //-----------------------------------------------------------------------
-// Object: Task 08: 
+// Object: Task 08: Functions based on dates
 //-----------------------------------------------------------------------
 // File: DateFunction.cpp
-// Summary:
+// Summary:	Takes an input date in form of single integer then finds
+// the next date from that day.
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
@@ -16,6 +17,7 @@ bool leapYear(int year);
 int daysInMonth(int year, int month);
 int tomorrow(int date);
 
+// Entry point
 int main()
 {
 	cout << "Date functions" << endl;
@@ -25,15 +27,6 @@ int main()
 		int input;
 
 		cout << "======" << endl << endl;
-
-		/*
-		cin >> input;
-
-		if (leapYear(input))
-			cout << "This is a leap year!" << endl;
-		else
-			cout << "This is not a leap year!" << endl;
-			*/
 
 		cout << "Please enter the current date: ";
 		
@@ -48,6 +41,9 @@ int main()
 	return 0;
 }
 
+// bool leapYear(int)
+//
+// Returns true if the given year is a leap year
 bool leapYear(int year)
 {
 	if (year % 4)
@@ -59,6 +55,9 @@ bool leapYear(int year)
 	return true;
 }
 
+// int daysInMonth(int, int)
+//
+// Returns the amount of days in the given month of selected year
 int daysInMonth(int year, int month)
 {
 	switch (month) {
@@ -81,6 +80,9 @@ int daysInMonth(int year, int month)
 	}
 }
 
+// int tomorrow(int)
+//
+// Finds the next day after the given date
 int tomorrow(int date)
 {
 	int day = date % 100;

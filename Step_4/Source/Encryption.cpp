@@ -1,9 +1,8 @@
 //-----------------------------------------------------------------------
-// Object: Task 04: Abbreviate a name by trimming the first name
+// Object: Task 04: Encrypt a string with shift cipher
 //-----------------------------------------------------------------------
 // File: Encryption.cpp
-// Summary: This program takes an input name and abbreviates it by
-// trimming the character after the first letter of the first name.
+// Summary: This program takes an input text then encrypts it.
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
@@ -20,6 +19,7 @@ int BUFFER_SIZE = 255;
 // Prototypes
 char* encrypt(char*& encryptedText, const char* plaintext);
 
+// Entry point
 int main()
 {
 	char answer = 'Y';
@@ -48,6 +48,9 @@ int main()
 	return 0;
 }
 
+// char* encrypt(char *&, const char*)
+//
+// Takes input string, returns ciphertext that's the input string but encrypted
 char * encrypt(char *& encryptedText, const char * plaintext)
 {
 	size_t length = strlen(plaintext);

@@ -20,6 +20,7 @@ const double FAHRENHEIT_TO_CELSIUS = (212 - 32) / 100.0f;
 
 bool convertTemperature(double fahrenheit, double& celcius);
 
+// Entry point
 int main()
 {
 	char answer;
@@ -45,6 +46,9 @@ int main()
 	return 0;
 }
 
+// bool convertTemperature(double, double&)
+//
+// Converts to Celcius from Fahrenheit via parameter. Returns true if the temperature is equal to or warmer than 0 C
 bool convertTemperature(double fahrenheit, double& celcius) 
 {
 	celcius = (fahrenheit - 32) / FAHRENHEIT_TO_CELSIUS;

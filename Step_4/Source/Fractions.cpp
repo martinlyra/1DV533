@@ -16,6 +16,8 @@
 using namespace std;
 
 // Constants
+// enum Operation
+// Enumeration representing arithmetic operations in mathematics
 enum Operation {
 	ADDITION,
 	SUBSTRACTION,
@@ -89,6 +91,9 @@ struct Fraction
 		return stringFormat("%i", quota);
 	}
 
+	// Fraction operator+(Fraction&)
+	//
+	// Addition
 	Fraction operator+(Fraction& other)
 	{
 		int n, d;
@@ -106,6 +111,9 @@ struct Fraction
 		return Fraction(n, d);
 	}
 
+	// Fraction operator-(Fraction&)
+	//
+	// Substraction
 	Fraction operator-(Fraction& other)
 	{
 		int n, d;
@@ -123,6 +131,9 @@ struct Fraction
 		return Fraction(n, d);
 	}
 
+	// Fraction operator*(Fraction&)
+	//
+	// Multiplication
 	Fraction operator*(Fraction& other)
 	{
 		int n, d;
@@ -133,6 +144,9 @@ struct Fraction
 		return Fraction(n, d);
 	}
 
+	// Fraction operator/(Fraction&)
+	//
+	// Divison
 	Fraction operator/(Fraction& other)
 	{
 		int n, d;
@@ -144,6 +158,7 @@ struct Fraction
 	}
 };
 
+// Entry point
 int main() {
 	char answer;
 
@@ -152,17 +167,21 @@ int main() {
 		char operationChar;
 		Fraction fracA, fracB, fracR;
 
+		// Ask for operation
 		op = pickOperation();
 		cout << '\n';
 
+		// Get fraction A
 		cout << "Please input the first fraction: ";
 		while (!loadFraction(fracA)) 
 			cout << "Improper input, please try again.\n";
 
+		// Get fraction B
 		cout << "Please input the second fraction: ";
 		while (!loadFraction(fracB)) 
 			cout << "Improper input, please try again.\n";
 
+		// Calculate fraction R based on selected operation and the fractions A & B
 		switch (op)
 		{
 		case ADDITION:
@@ -185,6 +204,7 @@ int main() {
 			break;
 		}
 
+		// Print result
 		cout << "\nCalculation:\n";
 		cout << fracA.toStringFull() 
 			<< " " << operationChar << " " 
@@ -208,6 +228,9 @@ int gcd(int a, int b)
 	return gcd(b, a % b);
 }
 
+// Operation pickOperation()
+//
+// Ask user to pick one mathematical arithmetic operation
 Operation pickOperation()
 {
 	cout << "Pick arithmetic operator:\n"
@@ -233,6 +256,9 @@ Operation pickOperation()
 	return Operation(pick);
 }
 
+// bool loadFraction(Fraction&)
+//
+// Loads input fraction to parameter, returns true if the input was read error-free.
 bool loadFraction(Fraction & fraction)
 {
 	string input;

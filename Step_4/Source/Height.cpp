@@ -1,9 +1,10 @@
 //-----------------------------------------------------------------------
-// Object: Task 04: Abbreviate a name by trimming the first name
+// Object: Task 05: Calculate the height of an offspring, in Imperial
 //-----------------------------------------------------------------------
 // File: Encryption.cpp
-// Summary: This program takes an input name and abbreviates it by
-// trimming the character after the first letter of the first name.
+// Summary: This program takes input gender and two heights, in inferior 
+// Imperial, calculating the approximate height of the child, in inferior
+// Imperial.
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
@@ -18,6 +19,7 @@ using namespace std;
 const double FOOT_TO_MILIMETERS = 304.8f;
 const double INCH_TO_MILIMETERS = 25.4f;
 
+// Gender enum
 enum Gender
 {
 	INVAILD,
@@ -56,6 +58,9 @@ int main() {
 	return 0;
 }
 
+// Gender getGender() 
+//
+// Loads gender from user input
 Gender getGender() {
 	char answer;
 	Gender out = Gender::INVAILD;
@@ -79,6 +84,9 @@ Gender getGender() {
 	return out;
 }
 
+// int getImperialHeight()
+//
+// Loads an Imperial height from user input, converted to milimeter
 int getImperialHeight() {
 	string imperial;
 
@@ -93,6 +101,9 @@ int getImperialHeight() {
 	return round(double(feet) * FOOT_TO_MILIMETERS + double(inches) * INCH_TO_MILIMETERS);
 }
 
+// int calculateChildHiehgt(Gender, int, int)
+//
+// Calculates the height of the child based on the given parameters.
 int calculateChildHeight(Gender gender, int motherHeight, int fatherHeight) {
 	switch (gender) {
 	case MALE: return (motherHeight * 13 / 24) + fatherHeight / 2;
@@ -101,6 +112,9 @@ int calculateChildHeight(Gender gender, int motherHeight, int fatherHeight) {
 	}
 }
 
+// string metricToImperial(int)
+//
+// Converts metric (milimeter) to Imperial in the foot'yard" format
 string metricToImperial(int metric) {
 	double remainder = metric % int(FOOT_TO_MILIMETERS);
 
