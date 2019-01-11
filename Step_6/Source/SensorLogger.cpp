@@ -1,15 +1,16 @@
 //-----------------------------------------------------------------------
-// Object: Task 3 -
+// Object: Task 3 - Filter logged data from specific point from others
 //-----------------------------------------------------------------------
 // File: SensorLogger.cpp
-// Summary: 
+// Summary: This program loads results from the log file then filters the
+// data based on whom it came from, in this case; 'A' point.
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
 // Log:			2019-01-10:	File created
 //-----------------------------------------------------------------------
 
-// This makes Visual Studio shut up about "insecure methods" like asctime
+// This makes Windows (Visual) shut up about "insecure methods" like asctime
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <iostream>

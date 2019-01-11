@@ -2,7 +2,7 @@
 // Object: Task 2 - Sum numbers stored in a file
 //-----------------------------------------------------------------------
 // File: NumSummator.cpp
-// Summary: 
+// Summary: This program loads numbers from file then sums them together
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------

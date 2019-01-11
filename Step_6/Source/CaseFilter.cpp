@@ -1,8 +1,9 @@
 //-----------------------------------------------------------------------
-// Object: Task 4 - Sum numbers stored in a file
+// Object: Task 4 - Filter string input into files by their case
 //-----------------------------------------------------------------------
 // File: CaseFilter.cpp
-// Summary: 
+// Summary: This program loads input from file then filters them based on
+// capitalization of characters.
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
@@ -17,6 +18,7 @@ using namespace std;
 // Constants
 const char* TARGET_FILE_NAME = "abcfile.dat";
 
+// Entry point
 int main() {
 	ifstream file;
 	file.open(TARGET_FILE_NAME, ios::in | ios::binary);

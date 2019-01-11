@@ -1,8 +1,9 @@
 //-----------------------------------------------------------------------
-// Object: Task 5 - Sum numbers stored in a file
+// Object: Task 5 - Filter logged SMS messaged by sender
 //-----------------------------------------------------------------------
 // File: SMSFilter.cpp
-// Summary: 
+// Summary: This program loads data from file and then filters the 
+// messages based on a specific sender
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
@@ -40,6 +41,10 @@ int main() {
 	return 0;
 }
 
+// bool senderFilter(const char*, const char*, const char*)
+//
+// Loads logged SMS from log file and then creates a new filtered output based on 
+// given sender number
 bool senderFilter(const char * logFileName, const char * resultFileName, const char * sender)
 {
 	ifstream log(logFileName, ios::in);
@@ -65,7 +70,7 @@ bool senderFilter(const char * logFileName, const char * resultFileName, const c
 	ofstream result(resultFileName);
 
 	if (result.fail()) {
-		cout << "Task succesful, but couldn't open and write to the file " << resultFileName << "!\n";
+		cout << "Task successful, but couldn't open and write to the file " << resultFileName << "!\n";
 		return false;
 	}
 

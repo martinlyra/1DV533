@@ -2,7 +2,7 @@
 // Object: Task 1 - Telehphone contact registar
 //-----------------------------------------------------------------------
 // File: PhoneRegistar.cpp
-// Summary: 
+// Summary: This program takes user input then saves it to a file.
 // Version: 1.0
 // Owner: Martin Lyrå
 //-----------------------------------------------------------------------
